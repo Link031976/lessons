@@ -25,6 +25,9 @@
                 if ($this->$age>18) return TRUE;
                    else return FALSE;
             }
+
+        public function doubleSalary()
+            {$this->salary=$this->salary*2;}
     }
 
     class User 
@@ -34,19 +37,30 @@
 
         public function setAge($a) // переопреділення setAge
         {
-            $this->age=$a;
+            if ($a>=18) $this->age=$a;
         }
     }
 
+    class Rectangle
+    {
+        public $a;
+        public $b;
 
+        public function Rectangle()
+            {return $this->a*$this->b;}
+            
+        public function getPerimeter()
+            {return ($this->a+$this->b)*2;}
+    }
 
 $user1=new Employee('John',25,1000); //створення об'єкту work1 класу Employee
 $user2=new Employee('urik',26,2000); //створення об'єкту work2 класу Employee
         
-echo "<br> Загальна зарплата ".$user1->getSalary()+$user2->getSalary();
+echo "Загальна зарплата ".$user1->getSalary()+$user2->getSalary()."<br>";
 
 $john = new User;
 $john->age=25;
 
 $john->setAge(30);
-echo "john ".$john->age." років";
+echo "john ".$john->age." років<br>";
+
