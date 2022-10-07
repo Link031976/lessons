@@ -5,8 +5,13 @@ class User
         public $age ;//Вік
 
         public function setAge($a) // переопреділення setAge
-        {
-            if ($a>=18) $this->age=$a;
-        }
+            {
+                if ($a>=18) $this->age=$a;
+            }
+
+        public function show()
+            {
+                echo "Користувач ".$this->name.", йому ".$this->age." років <br>";
+            }
     }
 ?>
