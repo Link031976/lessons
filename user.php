@@ -13,5 +13,5 @@ class User
             {
                 echo "Користувач ".$this->name.", йому ".$this->age." років <br>";
             }
+        
     }
-?>

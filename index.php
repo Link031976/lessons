@@ -1,4 +1,6 @@
 <?php
+
+
 require_once('Employee.php');
 require_once('user.php');
 require_once('user_user.php');
@@ -15,7 +17,7 @@ $john->age=25;
 $john->setAge(30);
 echo "john ".$john->age." років<br>";
 
-$users=new User_user;
+$users=new UserUser;
 $users->name="Микита";
 $users->age=20;
 $users->show();
