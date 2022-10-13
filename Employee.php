@@ -12,7 +12,7 @@ class Employee
             $this->salary=$c;
         }
         public function getName() //повернення ім'я
-            {echo "Працівник ".$this->name;}
+            {return $this->name;}
 
         public function getAge() //повернення віку
             {return $this->age;}

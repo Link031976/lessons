@@ -9,9 +9,9 @@ class User
                 if ($a>=18) $this->age=$a;
             }
 
-        public function show()
+        public function show($a)
             {
-                echo "Користувач ".$this->name.", йому ".$this->age." років <br>";
+                return $this->$a;
             }
         
     }

@@ -1,10 +1,10 @@
 <?php
 
 
-require_once('Employee.php');
+require_once('employee.php');
 require_once('user.php');
 require_once('user_user.php');
-require_once('Rectangle.php');
+require_once('rectangle.php');
 
 $user1=new Employee('John',25,1000); //створення об'єкту work1 класу Employee
 $user2=new Employee('urik',26,2000); //створення об'єкту work2 класу Employee

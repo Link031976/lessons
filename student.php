@@ -1,8 +1,8 @@
 <?php
     class Student
     {
-        private $name;
-        private $course=
+        private $name;//ім'я
+        private $course;//курс
 
     }
     

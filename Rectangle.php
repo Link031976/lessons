@@ -1,8 +1,8 @@
 <?php
     class Rectangle
     {
-        private $a;
-        private $b;
+        private $a;//сторона прямокутника
+        private $b;//сторона прямокутника
 
         public function Rectangle()
             {return $this->a*$this->b;}
