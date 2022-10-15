@@ -6,8 +6,8 @@ require_once('user.php');
 require_once('user_user.php');
 require_once('rectangle.php');
 
-$user1=new Employee('John',25,1000); //створення об'єкту work1 класу Employee
-$user2=new Employee('urik',26,2000); //створення об'єкту work2 класу Employee
+$user1=new Employee('John',25,1000); //bild object work1 class Employee
+$user2=new Employee('urik',26,2000); //bild object work2 class Employee
         
 echo "Загальна зарплата ".$user1->getSalary()+$user2->getSalary()."<br>";
 
@@ -20,13 +20,13 @@ echo "john ".$john->age." років<br>";
 $users=new UserUser;
 $users->name="Микита";
 $users->age=20;
-$users->show();
+echo $users->show('age');
 
 $users->setAge(3);
-$users->show();
+echo "<br>set 3 ".$users->show('age');
 
 $users->setAge(30);
-$users->show();
+echo "<br>set 30 ".$users->show('age');
 
 $users->addAge(25);
-$users->show();
+echo "<br>add 25 ".$users->show('age');
