@@ -44,3 +44,5 @@ echo $workers[1]->getter('name')." йому ".$workers[1]->getter('age')."<br>";
 
 $workers[1]->setter('age',50);
 echo $workers[1]->getter('name')." йому ".$workers[1]->getter('age')."<br>";
+
+echo $workers[0]->getter('name')." отримує ".$workers[0]->getter('salary')."<br>";

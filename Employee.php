@@ -31,7 +31,8 @@ class Employee
 
         public function getter($name)
             {
-                return $this->$name;
+                if ($name=='salary') return $this->salary."$";
+                    else return $this->$name;
             }
 
         public function setter ($name,$value)
