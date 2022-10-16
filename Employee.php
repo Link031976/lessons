@@ -22,7 +22,7 @@ class Employee
 
         public function checkAge() //перевірка на повноліття
             {
-                if ($this->$age>18) return TRUE;
+                if ($this->age > 18) return TRUE;
                    else return FALSE;
             }
 
