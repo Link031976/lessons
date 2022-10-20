@@ -11,6 +11,7 @@
     $arr->set(13);
 
     //echo $arr->getSum(); // виведе 0
+    echo "<h4 style='color: red'>Завдання 1 </h4>";
     echo "Початковий:";
     $result=$arr->get();
     
@@ -20,17 +21,21 @@
     
     $arr->add($mas);
     echo "Отримано:";
+
+    echo "<h4 style='color: red'>Завдання 2 </h4>";
     $result=$arr->get();
+    echo "Середнє арифмітичне ".$arr->getAvg()."\n";
 
-    echo "Середнє арифмітичне ".$arr->getAvg();
-
-    $city= new City ();
+    echo "<h4 style='color: red'>Завдання 3-4 </h4>";
+    $city= new City;
     $class_vars = get_class_vars(get_class($city));
     print_r($city->props);
 
-
-
-
-    $user = new User('john', 21);
-    //$method = 'getName';
-    //echo $user->$method(); // виведе 'john'
+    echo "<h4 style='color: red'>Завдання 5 </h4>";
+    $user = new User('Іванов', 'Іван', 'Іванович');
+    $props = ['prop1' => 'surname', 'prop2' => 'name', 'prop3' => 'patronymic'];
+    echo $user->{$props['prop1']}." "; // виведе 'Іванов'
+    echo $user->{$props['prop2']}." "; // виведе 'Іванов'
+    echo $user->{$props['prop3']}; // виведе 'Іванов'
+    
+    echo "<h4 style='color: red'>Завдання 6 </h4>";
