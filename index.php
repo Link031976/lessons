@@ -1,32 +1,20 @@
 <?php
+    include('arr.php');
 
+    $arr = new Arr;
+    $arr->set(10);
+    $arr->set(11);
+    $arr->set(12);
+    $arr->set(13);
 
-require_once('employee.php');
-require_once('user.php');
-require_once('user_user.php');
-require_once('rectangle.php');
-
-$user1=new Employee('John',25,1000); //створення об'єкту work1 класу Employee
-$user2=new Employee('urik',26,2000); //створення об'єкту work2 класу Employee
-        
-echo "Загальна зарплата ".$user1->getSalary()+$user2->getSalary()."<br>";
-
-$john = new User;
-$john->age=25;
-
-$john->setAge(30);
-echo "john ".$john->age." років<br>";
-
-$users=new UserUser;
-$users->name="Микита";
-$users->age=20;
-$users->show();
-
-$users->setAge(3);
-$users->show();
-
-$users->setAge(30);
-$users->show();
-
-$users->addAge(25);
-$users->show();
+    //echo $arr->getSum(); // виведе 0
+    echo "Початковий:";
+    $result=$arr->get();
+    
+    echo "Додаємо: <pre>";
+    $mas=array(20,21,22,23,24);
+    print_r($mas);
+    
+    $arr->add($mas);
+    echo "Отримано:";
+    $result=$arr->get();
