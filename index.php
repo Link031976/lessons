@@ -1,5 +1,6 @@
 <?php
     include('arr.php');
+    include('city.php');
 
     $arr = new Arr;
     $arr->set(10);
