@@ -1,6 +1,8 @@
 <?php
     include('arr.php');
     include('city.php');
+    include('user.php');
+
 
     $arr = new Arr;
     $arr->set(10);
@@ -21,3 +23,14 @@
     $result=$arr->get();
 
     echo "Середнє арифмітичне ".$arr->getAvg();
+
+    $city= new City ();
+    $class_vars = get_class_vars(get_class($city));
+    print_r($city->props);
+
+
+
+
+    $user = new User('john', 21);
+    //$method = 'getName';
+    //echo $user->$method(); // виведе 'john'
