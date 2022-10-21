@@ -1,17 +1,28 @@
 <?php
-class User 
+
+class User
     {
-        public $name;//Ім'я
-        public $age ;//Вік
+        public $surname; // прізвище
+        public $name; // ім'я
+        public $patronymic; // по батькові
+        public $age;
 
-        public function setAge($a) // переопреділення setAge
+
+        public function __construct($surname, $name, $patronymic, $age)
             {
-                if ($a>=18) $this->age=$a;
+                $this->surname = $surname;
+                $this->name = $name;
+                $this->patronymic = $patronymic;
+                $this->age = $age;                          
             }
-
-        public function show($a)
+        public function getName()
             {
-                return $this->$a;
+                return $this->name;
             }
         
+            public function getAge()
+            {
+                return $this->age;
+            }
     }
+
