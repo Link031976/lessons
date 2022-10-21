@@ -18,12 +18,12 @@
     echo "Додаємо: <pre>";
     $mas=array(20,21,22,23,24);
     print_r($mas);
-    
+        
     $arr->add($mas);
-    echo "Отримано:";
+    echo "Отримано:";    
+    $result=$arr->get();
 
     echo "<h4 style='color: red'>Завдання 2 </h4>";
-    $result=$arr->get();
     echo "Середнє арифмітичне ".$arr->getAvg()."\n";
 
     echo "<h4 style='color: red'>Завдання 3-4 </h4>";
@@ -32,10 +32,16 @@
     print_r($city->props);
 
     echo "<h4 style='color: red'>Завдання 5 </h4>";
-    $user = new User('Іванов', 'Іван', 'Іванович');
+    $user = new User('Іванов', 'Іван', 'Іванович',52);
     $props = ['prop1' => 'surname', 'prop2' => 'name', 'prop3' => 'patronymic'];
     echo $user->{$props['prop1']}." "; // виведе 'Іванов'
     echo $user->{$props['prop2']}." "; // виведе 'Іванов'
     echo $user->{$props['prop3']}; // виведе 'Іванов'
     
     echo "<h4 style='color: red'>Завдання 6 </h4>";
+    $methods = ['method1' => 'getName', 'method2' => 'getAge'];    
+    foreach ($methods as $i)
+        {
+            echo $user->$i();            
+        }
+    
