@@ -1,47 +1,32 @@
 <?php
-    include('arr.php');
-    include('city.php');
-    include('user.php');
 
 
-    $arr = new Arr;
-    $arr->set(10);
-    $arr->set(11);
-    $arr->set(12);
-    $arr->set(13);
+require_once('employee.php');
+require_once('user.php');
+require_once('user_user.php');
+require_once('rectangle.php');
 
-    //echo $arr->getSum(); // виведе 0
-    echo "<h4 style='color: red'>Завдання 1 </h4>";
-    echo "Початковий:";
-    $result=$arr->get();
-    
-    echo "Додаємо: <pre>";
-    $mas=array(20,21,22,23,24);
-    print_r($mas);
+$user1=new Employee('John',25,1000); //створення об'єкту work1 класу Employee
+$user2=new Employee('urik',26,2000); //створення об'єкту work2 класу Employee
         
-    $arr->add($mas);
-    echo "Отримано:";    
-    $result=$arr->get();
+echo "Загальна зарплата ".$user1->getSalary()+$user2->getSalary()."<br>";
 
-    echo "<h4 style='color: red'>Завдання 2 </h4>";
-    echo "Середнє арифмітичне ".$arr->getAvg()."\n";
+$john = new User;
+$john->age=25;
 
-    echo "<h4 style='color: red'>Завдання 3-4 </h4>";
-    $city= new City;
-    $class_vars = get_class_vars(get_class($city));
-    print_r($city->props);
+$john->setAge(30);
+echo "john ".$john->age." років<br>";
 
-    echo "<h4 style='color: red'>Завдання 5 </h4>";
-    $user = new User('Іванов', 'Іван', 'Іванович',52);
-    $props = ['prop1' => 'surname', 'prop2' => 'name', 'prop3' => 'patronymic'];
-    echo $user->{$props['prop1']}." "; // виведе 'Іванов'
-    echo $user->{$props['prop2']}." "; // виведе 'Іванов'
-    echo $user->{$props['prop3']}; // виведе 'Іванов'
-    
-    echo "<h4 style='color: red'>Завдання 6 </h4>";
-    $methods = ['method1' => 'getName', 'method2' => 'getAge'];    
-    foreach ($methods as $i)
-        {
-            echo $user->$i();            
-        }
-    
+$users=new UserUser;
+$users->name="Микита";
+$users->age=20;
+$users->show();
+
+$users->setAge(3);
+$users->show();
+
+$users->setAge(30);
+$users->show();
+
+$users->addAge(25);
+$users->show();
