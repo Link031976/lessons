@@ -22,10 +22,28 @@ class Employee
 
         public function checkAge() //перевірка на повноліття
             {
-                if ($this->$age>18) return TRUE;
+                if ($this->age > 18) return TRUE;
                    else return FALSE;
             }
 
         public function doubleSalary()
             {$this->salary=$this->salary*2;}
+
+        public function getter($name)
+            {
+                if ($name=='salary') return $this->salary."$";
+                    else return $this->$name;
+            }
+
+        public function setter ($name,$value)
+            {
+                if ($name=='age') $value=$this->isAgeCorrect($value);
+                $this->$name=$value;
+            }
+
+        public function isAgeCorrect($age)
+            {
+                if (($age>1) and ($age<100)) return $age;
+                    else return $this->age;
+            }
     }
