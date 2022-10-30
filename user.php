@@ -2,9 +2,9 @@
 
 class User
     {
-        public $surname; // прізвище
-        public $name; // ім'я
-        public $patronymic; // по батькові
+        public $surname;
+        public $name;
+        public $patronymic;
         public $age;
 
 
@@ -20,7 +20,7 @@ class User
                 return $this->name;
             }
         
-            public function getAge()
+        public function getAge()
             {
                 return $this->age;
             }
