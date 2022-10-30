@@ -10,7 +10,6 @@
     $arr->set(12);
     $arr->set(13);
 
-    //echo $arr->getSum(); // виведе 0
     echo "<h4 style='color: red'>Завдання 1 </h4>";
     echo "Початковий:";
     $result=$arr->get();
