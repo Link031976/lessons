@@ -5,8 +5,12 @@
         private $b;//side of the rectangle
 
         public function Rectangle()
-            {return $this->a*$this->b;}
+            {
+                return $this->a*$this->b;
+            }
             
         public function getPerimeter()
-            {return ($this->a+$this->b)*2;}
+            {
+                return ($this->a+$this->b)*2;
+            }
     }
